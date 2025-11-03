@@ -765,7 +765,25 @@ body {
   color: #333;
 }
 
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 60px;
+    flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+  }
 
+  .nav-menu.active {
+    left: 0;
+  }
 
   .nav-item {
     margin: 10px 0;
@@ -844,6 +862,7 @@ body {
   .page {
     padding: 20px 10px;
   }
+}
 
 @media screen and (max-width: 480px) {
   .nav-container {
@@ -946,6 +965,11 @@ body {
   z-index: 9999; /* keeps toggle above everything */
 }
 
+.nav-toggle {
+  position: relative;
+  z-index: 9999; /* keeps toggle above everything */
+}
+
 /* Animation */
 @keyframes popIn {
   from { transform: scale(0.8); opacity: 0; }
@@ -984,115 +1008,6 @@ body {
 
   .gallery-container {
     padding: 10px;
-  }
-}
-/* --- Navbar click fix --- */
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 9999; /* keep navbar on top of everything */
-}
-
-.nav-toggle {
-  position: relative;
-  z-index: 10000; /* ensure burger button is clickable */
-}
-
-.main-content,
-.site-header,
-.hero-section {
-  position: relative;
-  z-index: 1; /* keeps content behind navbar */
-}
-/* --- Mobile Navbar Dropdown Expand Fix --- */
-@media screen and (max-width: 768px) {
-  .nav-menu {
-    position: absolute;
-    top: 80px; /* directly below navbar */
-    left: 0;
-    width: 100%;
-    background-color: #fff;
-    flex-direction: column;
-    overflow: hidden;
-    max-height: 0; /* collapsed by default */
-    transition: max-height 0.4s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    z-index: 9998;
-  }
-
-  /* When burger is clicked */
-  .nav-menu.active {
-    max-height: 500px; /* expanded height — adjust as needed */
-  }
-
-  .nav-item {
-    margin: 10px 0;
-  }
-
-  .nav-link {
-    padding: 12px 0;
-    display: block;
-    color: #333;
-  }
-}
-/* --- FIXED MOBILE DROPDOWN NAV --- */
-@media screen and (max-width: 768px) {
-  .nav-menu {
-    position: absolute;
-    top: 80px; /* below navbar */
-    left: 0;
-    width: 100%;
-    background-color: #fff;
-    flex-direction: column;
-    overflow: hidden;
-    max-height: 0; /* collapsed */
-    transition: max-height 0.4s ease-in-out;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    z-index: 9998;
-  }
-
-  .nav-menu.active {
-    max-height: 400px; /* expands down smoothly */
-  }
-
-  .nav-item {
-    margin: 10px 0;
-  }
-
-  .nav-link {
-    display: block;
-    padding: 15px 0;
-    color: #333;
-    text-decoration: none;
-    font-weight: 600;
-  }
-
-  .nav-toggle {
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    z-index: 10000;
-  }
-
-  .bar {
-    width: 25px;
-    height: 3px;
-    background-color: #333;
-    margin: 4px 0;
-    transition: 0.3s;
-  }
-
-  .nav-toggle.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-
-  .nav-toggle.active .bar:nth-child(2) {
-    opacity: 0;
-  }
-
-  .nav-toggle.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
   }
 }
 
