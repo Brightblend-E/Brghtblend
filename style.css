@@ -1024,4 +1024,35 @@ body {
   position: relative;
   z-index: 1; /* keeps content behind navbar */
 }
+/* --- Mobile Navbar Dropdown Expand Fix --- */
+@media screen and (max-width: 768px) {
+  .nav-menu {
+    position: absolute;
+    top: 80px; /* directly below navbar */
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    flex-direction: column;
+    overflow: hidden;
+    max-height: 0; /* collapsed by default */
+    transition: max-height 0.4s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    z-index: 9998;
+  }
+
+  /* When burger is clicked */
+  .nav-menu.active {
+    max-height: 500px; /* expanded height — adjust as needed */
+  }
+
+  .nav-item {
+    margin: 10px 0;
+  }
+
+  .nav-link {
+    padding: 12px 0;
+    display: block;
+    color: #333;
+  }
+}
 
