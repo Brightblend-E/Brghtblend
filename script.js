@@ -181,7 +181,7 @@ function updateGalleryImage() {
     };
 
     galleryImage.src = currentImage.src;
-    galleryImage.alt = currentImage.description;
+    galleryImage.alt = "Gallery image";
     galleryCounter.textContent = `${currentImageIndex + 1} / ${galleryImages.length}`;
     galleryDescription.textContent = currentImage.description;
   }
