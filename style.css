@@ -1005,4 +1005,23 @@ body {
     padding: 10px;
   }
 }
+/* --- Navbar click fix --- */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999; /* keep navbar on top of everything */
+}
+
+.nav-toggle {
+  position: relative;
+  z-index: 10000; /* ensure burger button is clickable */
+}
+
+.main-content,
+.site-header,
+.hero-section {
+  position: relative;
+  z-index: 1; /* keeps content behind navbar */
+}
 
