@@ -959,27 +959,11 @@ body {
 .slide.active {
   opacity: 1;
 }
-@media (max-width: 600px) {
-  h1, h2, h3 {
-    font-size: 1.3rem;
-    text-align: center;
-  }
-
-  p {
-    font-size: 0.95rem;
-    line-height: 1.5;
-  }
-
-  .page-content {
-    padding: 10px;
-  }
-
-  .product-card {
-    width: 100%;
-    margin: 10px 0;
-  }
+/* Fix mobile nav toggle click issue */
+.nav-toggle {
+  position: relative;
+  z-index: 9999; /* keeps toggle above everything */
 }
-
 
 /* Animation */
 @keyframes popIn {
