@@ -132,35 +132,35 @@ document.addEventListener('DOMContentLoaded', function() {
 const galleryImages = [
   {
     src: "1.jpg",
-    description: "Our premium cleaning products in action"
+    
   },
   {
     src: "2.jpg",
-    description: "Behind the scenes: production process"
+    
   },
   {
     src: "3.jpg",
-    description: "Packaging our eco-friendly cleaning products"
+    
   },
   {
     src: "4.jpg",
-    description: "Students presenting BrightBlend Essentials"
+    
   },
   {
     src: "5.jpg",
-    description: "Customer testing and feedback session"
+    
   },
   {
     src: "6.jpg",
-    description: "Retail display of BrightBlend products"
+    
   },
   {
     src: "7.jpg",
-    description: "Group photo of the BrightBlend team"
+    
   },
   {
     src: "8.jpg",
-    description: "Community outreach and product awareness"
+    
   }
 ];
 
