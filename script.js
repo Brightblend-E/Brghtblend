@@ -250,6 +250,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
   setInterval(showNextSlide, 3000); // changes every 3 seconds
 });
+// Order Now Button Function (redirects to Facebook)
+function orderProduct(productName) {
+  window.open(
+    "https://web.facebook.com/people/BrightBlend-Essentials/61565928765158/",
+    "_blank"
+  );
+}
 
 
 
